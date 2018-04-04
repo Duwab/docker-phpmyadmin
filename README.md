@@ -1,4 +1,4 @@
-# Mysql + PhpMyAdmin with docker
+# Mysql + PhpMyAdmin with Docker
 
 1. Set variables in docker-compose.yml
 ```
