@@ -1,0 +1,21 @@
+mysql:
+  image: mysql
+  environment:
+    #MYSQL_USER: admin
+    #MYSQL_PASSWORD: password
+    MYSQL_ROOT_PASSWORD: password
+    #MYSQL_DATABASE: password
+  ports:
+    - '3307:3306'
+  volumes:
+    - ./storage/mysql:/var/lib/mysql
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  links:
+    - mysql
+  environment:
+    PMA_HOST: mysql
+    PMA_PORT: 3306
+  ports:
+    - '8081:80'
+
